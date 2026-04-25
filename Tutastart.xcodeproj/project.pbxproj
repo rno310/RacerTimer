@@ -356,6 +356,7 @@
 				DEVELOPMENT_TEAM = 62UWKKAZSA;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = watchos;
@@ -524,6 +525,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = iphoneos;
@@ -555,6 +557,7 @@
 				DEVELOPMENT_TEAM = 62UWKKAZSA;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = watchos;
@@ -578,6 +581,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = iphoneos;
