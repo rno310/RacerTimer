@@ -19,25 +19,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Select Xcode
-        run: sudo xcode-select -s /Applications/Xcode.app
+      - name: Show Xcode version
+        run: xcodebuild -version
 
-      - name: Pick an iPhone simulator
+      - name: Pick iPhone simulator
         id: sim
         run: |
-          device=$(xcrun xctrace list devices 2>&1 \
-            | grep -oE 'iPhone[^()]+' \
-            | head -1 \
-            | awk '{$1=$1;print}')
-          echo "Using simulator: $device"
-          echo "device=$device" >> "$GITHUB_OUTPUT"
+          UDID=$(xcrun simctl list devices available -j \
+            | jq -r '.devices | to_entries[] | select(.key | contains("iOS")) | .value[] | select(.name | startswith("iPhone")) | .udid' \
+            | head -1)
+          if [ -z "$UDID" ]; then
+            echo "No iPhone simulator available. Listing what's installed:"
+            xcrun simctl list devices available
+            exit 1
+          fi
+          NAME=$(xcrun simctl list devices available -j \
+            | jq -r --arg u "$UDID" '.devices | to_entries[] | .value[] | select(.udid == $u) | .name')
+          echo "Using simulator: $NAME ($UDID)"
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
 
       - name: Build for testing
         run: |
           xcodebuild build-for-testing \
             -project "$PROJECT" \
             -scheme "$SCHEME" \
-            -destination "platform=iOS Simulator,name=${{ steps.sim.outputs.device }}" \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
             CODE_SIGNING_ALLOWED=NO
 
       - name: Run tests
@@ -45,5 +51,5 @@ jobs:
           xcodebuild test-without-building \
             -project "$PROJECT" \
             -scheme "$SCHEME" \
-            -destination "platform=iOS Simulator,name=${{ steps.sim.outputs.device }}" \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
             CODE_SIGNING_ALLOWED=NO
