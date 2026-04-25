@@ -33,14 +33,14 @@ struct TimerView: View {
                     Spacer(minLength: 0)
 
                     Text(text)
-                        .font(.system(size: 220, weight: .heavy, design: .default))
+                        .font(.system(size: remaining > 0 ? 320 : 160, weight: .heavy).width(.compressed))
                         .monospacedDigit()
-                        .tracking(-4)
                         .foregroundColor(textColor)
                         .minimumScaleFactor(0.25)
                         .lineLimit(1)
                         .allowsTightening(true)
                         .frame(maxWidth: .infinity)
+                        .padding(.horizontal, 4)
                         .shadow(color: .black.opacity(0.35), radius: 1, x: 0, y: 1)
 
                     Spacer(minLength: 0)
@@ -70,50 +70,32 @@ private struct ControlsView: View {
         let now = model.engine.now
         let remaining = state.remaining(at: now)
         let countingDown = state.isCountingDown(at: now)
-        let running = state.mode == .running
 
         if state.mode == .idle {
             Button {
                 model.engine.start()
             } label: {
                 Text("Start")
-                    .font(.system(size: 18, weight: .semibold))
-                    .frame(maxWidth: .infinity)
+                    .font(.system(size: 20, weight: .semibold))
+                    .frame(maxWidth: .infinity, minHeight: 36)
             }
             .buttonStyle(.borderedProminent)
             .tint(.white.opacity(0.25))
         } else if countingDown {
-            VStack(spacing: 4) {
-                HStack(spacing: 6) {
-                    smallButton("−1", enabled: remaining >= 60) { model.engine.minusOne() }
-                    smallButton("Sync", enabled: remaining >= 60) { model.engine.sync() }
-                    smallButton("+1", enabled: true) { model.engine.plusOne() }
-                }
-                Button(role: .destructive) {
-                    model.engine.reset()
-                } label: {
-                    Text("Reset").frame(maxWidth: .infinity).font(.system(size: 14, weight: .semibold))
-                }
-                .buttonStyle(.bordered)
-                .tint(.white)
+            HStack(spacing: 6) {
+                smallButton("Sync", enabled: remaining >= 60) { model.engine.sync() }
+                smallButton("+1", enabled: true) { model.engine.plusOne() }
             }
-        } else if running {
-            Button(role: .destructive) {
-                model.engine.reset()
-            } label: {
-                Text("Reset").frame(maxWidth: .infinity).font(.system(size: 16, weight: .semibold))
-            }
-            .buttonStyle(.borderedProminent)
-            .tint(.white.opacity(0.2))
         }
+        // Count-up: no bottom controls; reset is in the top toolbar.
     }
 
     @ViewBuilder
     private func smallButton(_ label: String, enabled: Bool, action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Text(label)
-                .font(.system(size: 16, weight: .semibold))
-                .frame(maxWidth: .infinity, minHeight: 28)
+                .font(.system(size: 18, weight: .semibold))
+                .frame(maxWidth: .infinity, minHeight: 36)
         }
         .buttonStyle(.bordered)
         .tint(.white)

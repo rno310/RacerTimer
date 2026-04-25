@@ -97,9 +97,12 @@ public final class AudioHapticSignaler: SignalPlaying {
                 schedule(shortTone)
             }
             hapticLight()
-        case .longPlusShorts(let count):
-            schedule(longTone)
-            for _ in 0..<count {
+        case .longsPlusShorts(let longs, let shorts):
+            for i in 0..<longs {
+                if i > 0 { schedule(gap) }
+                schedule(longTone)
+            }
+            for _ in 0..<shorts {
                 schedule(gap)
                 schedule(shortTone)
             }

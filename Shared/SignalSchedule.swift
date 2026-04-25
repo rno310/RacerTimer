@@ -4,7 +4,7 @@ public enum SignalKind: Sendable, Equatable {
     case long
     case short
     case shortBurst(count: Int)
-    case longPlusShorts(count: Int)
+    case longsPlusShorts(longs: Int, shorts: Int)
     case startSignal
 }
 
@@ -19,11 +19,13 @@ public enum SignalSchedule {
 
         var t = duration.rawValue
         while t >= 120 {
-            events.append(SignalEvent(secondsBeforeZero: t, kind: .long))
+            let minutes = t / 60
+            events.append(SignalEvent(secondsBeforeZero: t, kind: .longsPlusShorts(longs: minutes, shorts: 0)))
             t -= 60
         }
 
-        events.append(SignalEvent(secondsBeforeZero: 90, kind: .longPlusShorts(count: 3)))
+        events.append(SignalEvent(secondsBeforeZero: 150, kind: .longsPlusShorts(longs: 2, shorts: 3)))
+        events.append(SignalEvent(secondsBeforeZero: 90, kind: .longsPlusShorts(longs: 1, shorts: 3)))
         events.append(SignalEvent(secondsBeforeZero: 60, kind: .long))
         events.append(SignalEvent(secondsBeforeZero: 30, kind: .shortBurst(count: 3)))
         events.append(SignalEvent(secondsBeforeZero: 20, kind: .shortBurst(count: 2)))

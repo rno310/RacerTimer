@@ -31,8 +31,8 @@ public enum TimerDisplay {
         case 5: return Color(red: 0.04, green: 0.27, blue: 0.57)   // blue
         case 4: return Color(red: 0.00, green: 0.55, blue: 0.55)   // teal
         case 3: return Color(red: 0.05, green: 0.55, blue: 0.15)   // green
-        case 2: return Color(red: 0.82, green: 0.67, blue: 0.00)   // yellow
-        case 1: return Color(red: 0.90, green: 0.45, blue: 0.00)   // orange
+        case 2: return Color(red: 0.70, green: 0.35, blue: 0.00)   // burnt orange
+        case 1: return Color(red: 0.78, green: 0.18, blue: 0.00)   // deep red-orange
         default: return .red
         }
     }
@@ -66,8 +66,8 @@ public enum TimerDisplay {
         case 5: return Color(red: 0.015, green: 0.10, blue: 0.22)   // dark blue
         case 4: return Color(red: 0.00, green: 0.22, blue: 0.22)    // dark teal
         case 3: return Color(red: 0.02, green: 0.22, blue: 0.06)    // dark green
-        case 2: return Color(red: 0.35, green: 0.28, blue: 0.00)    // dark olive
-        case 1: return Color(red: 0.40, green: 0.20, blue: 0.00)    // dark amber
+        case 2: return Color(red: 0.30, green: 0.14, blue: 0.00)    // dark burnt
+        case 1: return Color(red: 0.32, green: 0.06, blue: 0.00)    // dark red-brown
         default: return Color(red: 0.40, green: 0.03, blue: 0.03)   // dark red
         }
     }

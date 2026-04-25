@@ -9,9 +9,8 @@ options:
 settings:
   base:
     SWIFT_VERSION: "5.10"
-    DEVELOPMENT_TEAM: ""
     CODE_SIGN_STYLE: Automatic
-    CODE_SIGN_IDENTITY: "-"
+    # DEVELOPMENT_TEAM: ABCD123456   # set this to your 10-char Team ID so xcodegen keeps it
     ENABLE_PREVIEWS: YES
     GENERATE_INFOPLIST_FILE: YES
     MARKETING_VERSION: "1.0"
@@ -29,6 +28,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.arnaud.tutastart
         PRODUCT_NAME: Tutastart
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_CFBundleDisplayName: "Pin to Win"
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
@@ -49,7 +49,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.arnaud.tutastart.watchkitapp
         PRODUCT_NAME: Tutastart
-        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_APPICON_NAME: WatchAppIcon
         INFOPLIST_FILE: Watch/Info.plist
         GENERATE_INFOPLIST_FILE: NO
         TARGETED_DEVICE_FAMILY: "4"

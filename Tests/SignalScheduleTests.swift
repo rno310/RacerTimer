@@ -6,12 +6,13 @@ final class SignalScheduleTests: XCTestCase {
         let events = SignalSchedule.events(for: .threeMinutes)
         let map = Dictionary(uniqueKeysWithValues: events.map { ($0.secondsBeforeZero, $0.kind) })
 
-        XCTAssertEqual(map[180], .long)
-        XCTAssertEqual(map[120], .long)
+        XCTAssertEqual(map[180], .longsPlusShorts(longs: 3, shorts: 0))
+        XCTAssertEqual(map[120], .longsPlusShorts(longs: 2, shorts: 0))
         XCTAssertNil(map[240], "no 4-minute mark in 3-min mode")
         XCTAssertNil(map[300], "no 5-minute mark in 3-min mode")
 
-        XCTAssertEqual(map[90], .longPlusShorts(count: 3))
+        XCTAssertEqual(map[150], .longsPlusShorts(longs: 2, shorts: 3))
+        XCTAssertEqual(map[90], .longsPlusShorts(longs: 1, shorts: 3))
         XCTAssertEqual(map[60], .long)
         XCTAssertEqual(map[30], .shortBurst(count: 3))
         XCTAssertEqual(map[20], .shortBurst(count: 2))
@@ -27,12 +28,13 @@ final class SignalScheduleTests: XCTestCase {
         let events = SignalSchedule.events(for: .fiveMinutes)
         let map = Dictionary(uniqueKeysWithValues: events.map { ($0.secondsBeforeZero, $0.kind) })
 
-        XCTAssertEqual(map[300], .long)
-        XCTAssertEqual(map[240], .long)
-        XCTAssertEqual(map[180], .long)
-        XCTAssertEqual(map[120], .long)
+        XCTAssertEqual(map[300], .longsPlusShorts(longs: 5, shorts: 0))
+        XCTAssertEqual(map[240], .longsPlusShorts(longs: 4, shorts: 0))
+        XCTAssertEqual(map[180], .longsPlusShorts(longs: 3, shorts: 0))
+        XCTAssertEqual(map[150], .longsPlusShorts(longs: 2, shorts: 3))
+        XCTAssertEqual(map[120], .longsPlusShorts(longs: 2, shorts: 0))
 
-        XCTAssertEqual(map[90], .longPlusShorts(count: 3))
+        XCTAssertEqual(map[90], .longsPlusShorts(longs: 1, shorts: 3))
         XCTAssertEqual(map[60], .long)
         XCTAssertEqual(map[30], .shortBurst(count: 3))
         XCTAssertEqual(map[20], .shortBurst(count: 2))
@@ -47,11 +49,11 @@ final class SignalScheduleTests: XCTestCase {
     }
 
     func testScheduleCountsAreExact() {
-        XCTAssertEqual(SignalSchedule.events(for: .threeMinutes).count, 13)
-        XCTAssertEqual(SignalSchedule.events(for: .fiveMinutes).count, 15)
+        XCTAssertEqual(SignalSchedule.events(for: .threeMinutes).count, 14)
+        XCTAssertEqual(SignalSchedule.events(for: .fiveMinutes).count, 16)
     }
 
-    func testNoMinuteMarkAtOrBelowOneMinute() {
+    func testOneMinuteMarkIsSingleLong() {
         let events = SignalSchedule.events(for: .threeMinutes)
         let minuteBand = events.filter { (60...61).contains($0.secondsBeforeZero) }
         XCTAssertEqual(minuteBand.count, 1)

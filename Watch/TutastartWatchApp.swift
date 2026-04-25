@@ -19,6 +19,15 @@ struct RootView: View {
         NavigationStack {
             TimerView()
                 .toolbar {
+                    if model.engine.state.mode != .idle {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button {
+                                model.engine.reset()
+                            } label: {
+                                Image(systemName: "arrow.counterclockwise")
+                            }
+                        }
+                    }
                     ToolbarItem(placement: .topBarTrailing) {
                         NavigationLink {
                             SettingsView()
