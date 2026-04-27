@@ -12,10 +12,11 @@
 		14339153EEA5C861CFE760D2 /* SignalSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F22C9D7FC0DBCF878887CB /* SignalSchedule.swift */; };
 		156F7357F9312D408F1B07BE /* TimerDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242081418D4DCC0749DF533 /* TimerDisplay.swift */; };
 		1D1247E78AD2A40C6773F13B /* TutastartWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3367CDCD274843A64E6AB430 /* TutastartWatchApp.swift */; };
-		22F5AEA95C795FDAEA09F62B /* Tutastart.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A68DF4CF515D67F9AE6C6DD2 /* Tutastart.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22F5AEA95C795FDAEA09F62B /* Tutastart Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A68DF4CF515D67F9AE6C6DD2 /* Tutastart Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2510CE82ECF0F32CD8E6AEE3 /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE0A89B424E890A2BA99348 /* TimerState.swift */; };
 		27DD25FF9640BF297E288B20 /* TimerStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D8774D0473F405FBFE12E2 /* TimerStateTests.swift */; };
 		28C1C6703E23EFF61CD2DD1E /* SignalSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F22C9D7FC0DBCF878887CB /* SignalSchedule.swift */; };
+		2933AFE0B695233C697E57C8 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5774CEDEB3A281425E1487 /* AppVersion.swift */; };
 		2D3DCBF5619DA8F31E4885E8 /* ConnectivityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F73C45D43FA94F2AC89FE10 /* ConnectivityBridge.swift */; };
 		310991B1E0094030F42BB7B0 /* SignalSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F22C9D7FC0DBCF878887CB /* SignalSchedule.swift */; };
 		33781E8887508A07589E34FD /* AudioHapticSignaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BB3CA207F071C5A16718F3 /* AudioHapticSignaler.swift */; };
@@ -39,8 +40,10 @@
 		BFA05944529BF374D43CA356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EE613F0192F7D72CA7B705 /* Assets.xcassets */; };
 		C53F7F4CA1FF51B38692C586 /* TimerDisplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0952FD4262C99BBE855C5A /* TimerDisplayTests.swift */; };
 		CCA85362B9C045E94E481A77 /* RecordingSignaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC34D7368664DA562CC61E9 /* RecordingSignaler.swift */; };
+		D45717F4E3D220B41D4C9393 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5774CEDEB3A281425E1487 /* AppVersion.swift */; };
 		E1DDCAC75120D52DDB18C183 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73A1A6C6E0860D1937C1210 /* SettingsView.swift */; };
 		EAF2C2BF2DE60A6EE04FCBEA /* ConnectivityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F73C45D43FA94F2AC89FE10 /* ConnectivityBridge.swift */; };
+		F4021309F57D31950EBD46F8 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5774CEDEB3A281425E1487 /* AppVersion.swift */; };
 		F606382C586979986C0ACEED /* AudioHapticSignaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BB3CA207F071C5A16718F3 /* AudioHapticSignaler.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +64,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				22F5AEA95C795FDAEA09F62B /* Tutastart.app in Embed Watch Content */,
+				22F5AEA95C795FDAEA09F62B /* Tutastart Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +78,7 @@
 		11C7DE8BE1E128179DB3B174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15EE613F0192F7D72CA7B705 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20BB3CA207F071C5A16718F3 /* AudioHapticSignaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHapticSignaler.swift; sourceTree = "<group>"; };
+		2E5774CEDEB3A281425E1487 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		2F035D17D98AFD1559FDC20B /* TimerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEngine.swift; sourceTree = "<group>"; };
 		3367CDCD274843A64E6AB430 /* TutastartWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutastartWatchApp.swift; sourceTree = "<group>"; };
 		6E0952FD4262C99BBE855C5A /* TimerDisplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDisplayTests.swift; sourceTree = "<group>"; };
@@ -84,8 +88,8 @@
 		8EDECED24AB9845240945FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8F0053315564154256F5CBDE /* SignalScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalScheduleTests.swift; sourceTree = "<group>"; };
 		96D8774D0473F405FBFE12E2 /* TimerStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStateTests.swift; sourceTree = "<group>"; };
-		A68DF4CF515D67F9AE6C6DD2 /* Tutastart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutastart.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCF551A6E62788269DF12057 /* Tutastart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutastart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68DF4CF515D67F9AE6C6DD2 /* Tutastart Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tutastart Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF551A6E62788269DF12057 /* Tutastart.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Tutastart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73A1A6C6E0860D1937C1210 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D242081418D4DCC0749DF533 /* TimerDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDisplay.swift; sourceTree = "<group>"; };
 		DFB679D78BF162357C277BB2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				06DCCCE16B38B34992CE8368 /* AppModel.swift */,
+				2E5774CEDEB3A281425E1487 /* AppVersion.swift */,
 				20BB3CA207F071C5A16718F3 /* AudioHapticSignaler.swift */,
 				0F73C45D43FA94F2AC89FE10 /* ConnectivityBridge.swift */,
 				86F22C9D7FC0DBCF878887CB /* SignalSchedule.swift */,
@@ -159,7 +164,7 @@
 		C3EDEC2E0EEBB9ABE132CD04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A68DF4CF515D67F9AE6C6DD2 /* Tutastart.app */,
+				A68DF4CF515D67F9AE6C6DD2 /* Tutastart Watch App.app */,
 				BCF551A6E62788269DF12057 /* Tutastart.app */,
 				8526E0FDB89D71CB397BAC68 /* TutastartTests.xctest */,
 			);
@@ -204,7 +209,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Tutastart Watch App";
-			productReference = A68DF4CF515D67F9AE6C6DD2 /* Tutastart.app */;
+			productReference = A68DF4CF515D67F9AE6C6DD2 /* Tutastart Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C80089875B4C776D214863E1 /* TutastartTests */ = {
@@ -290,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC3CC0E017E54589FFDEE4CF /* AppModel.swift in Sources */,
+				2933AFE0B695233C697E57C8 /* AppVersion.swift in Sources */,
 				F606382C586979986C0ACEED /* AudioHapticSignaler.swift in Sources */,
 				EAF2C2BF2DE60A6EE04FCBEA /* ConnectivityBridge.swift in Sources */,
 				E1DDCAC75120D52DDB18C183 /* SettingsView.swift in Sources */,
@@ -307,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				398E674C9C350AED4A31CA71 /* AppModel.swift in Sources */,
+				D45717F4E3D220B41D4C9393 /* AppVersion.swift in Sources */,
 				655AB9653AEBFA25D6B47AEB /* AudioHapticSignaler.swift in Sources */,
 				2D3DCBF5619DA8F31E4885E8 /* ConnectivityBridge.swift in Sources */,
 				CCA85362B9C045E94E481A77 /* RecordingSignaler.swift in Sources */,
@@ -326,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				613BF9ECBBA36ECBC3E54FBF /* AppModel.swift in Sources */,
+				F4021309F57D31950EBD46F8 /* AppVersion.swift in Sources */,
 				33781E8887508A07589E34FD /* AudioHapticSignaler.swift in Sources */,
 				AA9790900790FC03DECB12FB /* ConnectivityBridge.swift in Sources */,
 				BC13722A3EAE14AF65E4A8A6 /* SettingsView.swift in Sources */,
@@ -353,10 +361,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
-				DEVELOPMENT_TEAM = 62UWKKAZSA;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
-				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = watchos;
@@ -431,7 +437,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,7 +504,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -515,7 +521,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 62UWKKAZSA;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pin to Win";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -525,7 +530,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = iphoneos;
@@ -554,10 +558,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
-				DEVELOPMENT_TEAM = 62UWKKAZSA;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
-				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = watchos;
@@ -571,7 +573,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 62UWKKAZSA;
 				INFOPLIST_KEY_CFBundleDisplayName = "Pin to Win";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -581,7 +582,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = iphoneos;

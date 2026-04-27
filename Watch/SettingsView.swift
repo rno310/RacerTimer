@@ -28,6 +28,14 @@ struct SettingsView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+            Section("About") {
+                HStack {
+                    Text("Version")
+                    Spacer()
+                    Text(AppVersion.displayString)
+                        .foregroundStyle(.secondary)
+                }
+            }
         }
         .navigationTitle("Settings")
     }

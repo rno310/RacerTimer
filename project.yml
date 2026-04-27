@@ -13,7 +13,7 @@ settings:
     # DEVELOPMENT_TEAM: ABCD123456   # set this to your 10-char Team ID so xcodegen keeps it
     ENABLE_PREVIEWS: YES
     GENERATE_INFOPLIST_FILE: YES
-    MARKETING_VERSION: "1.0"
+    MARKETING_VERSION: "1.1"
     CURRENT_PROJECT_VERSION: "1"
 
 targets:
@@ -64,3 +64,35 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.arnaud.tutastart.tests
         GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  Tutastart:
+    build:
+      targets:
+        Tutastart: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - TutastartTests
+    archive:
+      config: Release
+
+  "Tutastart Watch App":
+    build:
+      targets:
+        "Tutastart Watch App": all
+    run:
+      config: Debug
+    archive:
+      config: Release
+
+  TutastartTests:
+    build:
+      targets:
+        TutastartTests: all
+    test:
+      config: Debug
+      targets:
+        - TutastartTests

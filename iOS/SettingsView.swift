@@ -29,6 +29,15 @@ struct SettingsView: View {
                     Text("Reset the timer to change the starting duration.")
                 }
             }
+
+            Section("About") {
+                HStack {
+                    Text("Version")
+                    Spacer()
+                    Text(AppVersion.displayString)
+                        .foregroundStyle(.secondary)
+                }
+            }
         }
         .navigationTitle("Settings")
     }
