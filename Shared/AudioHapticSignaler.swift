@@ -19,6 +19,10 @@ public final class AudioHapticSignaler: SignalPlaying {
     private let sampleRate: Double = 44_100
     private let toneFrequency: Double = 880
 
+    private let shortDuration: Double = 0.25
+    private let longDuration: Double = 1.0
+    private let gapDuration: Double = 0.12
+
     private var shortTone: AVAudioPCMBuffer?
     private var longTone: AVAudioPCMBuffer?
     private var startTone: AVAudioPCMBuffer?
@@ -48,10 +52,10 @@ public final class AudioHapticSignaler: SignalPlaying {
         }
         player.play()
 
-        shortTone = makeTone(duration: 0.25, format: format)
-        longTone  = makeTone(duration: 1.0,  format: format)
-        startTone = makeTone(duration: 3.0,  format: format)
-        gap       = makeSilence(duration: 0.12, format: format)
+        shortTone = makeTone(duration: shortDuration, format: format)
+        longTone  = makeTone(duration: longDuration,  format: format)
+        startTone = makeTone(duration: 3.0,           format: format)
+        gap       = makeSilence(duration: gapDuration, format: format)
     }
 
     private func makeTone(duration: Double, format: AVAudioFormat) -> AVAudioPCMBuffer? {
@@ -87,29 +91,60 @@ public final class AudioHapticSignaler: SignalPlaying {
         switch kind {
         case .long:
             schedule(longTone)
-            hapticStrong()
+            playHaptics([(0, true)])
         case .short:
             schedule(shortTone)
-            hapticLight()
+            playHaptics([(0, false)])
         case .shortBurst(let count):
+            var pattern: [(delay: Double, strong: Bool)] = []
+            var t: Double = 0
             for i in 0..<count {
-                if i > 0 { schedule(gap) }
+                if i > 0 { t += gapDuration }
+                pattern.append((t, false))
+                schedule(i > 0 ? gap : nil)
                 schedule(shortTone)
+                t += shortDuration
             }
-            hapticLight()
+            playHaptics(pattern)
         case .longsPlusShorts(let longs, let shorts):
+            var pattern: [(delay: Double, strong: Bool)] = []
+            var t: Double = 0
             for i in 0..<longs {
-                if i > 0 { schedule(gap) }
+                if i > 0 { t += gapDuration; schedule(gap) }
+                pattern.append((t, true))
                 schedule(longTone)
+                t += longDuration
             }
             for _ in 0..<shorts {
+                t += gapDuration
                 schedule(gap)
+                pattern.append((t, false))
                 schedule(shortTone)
+                t += shortDuration
             }
-            hapticStrong()
+            playHaptics(pattern)
         case .startSignal:
             schedule(startTone)
-            hapticStrong()
+            playHaptics([(0, true)])
+        }
+    }
+
+    private func playHaptics(_ events: [(delay: Double, strong: Bool)]) {
+        Task { @MainActor [weak self] in
+            var elapsed: Double = 0
+            for event in events {
+                let wait = event.delay - elapsed
+                if wait > 0 {
+                    try? await Task.sleep(nanoseconds: UInt64(wait * 1_000_000_000))
+                }
+                elapsed = event.delay
+                guard let self else { return }
+                if event.strong {
+                    self.hapticStrong()
+                } else {
+                    self.hapticLight()
+                }
+            }
         }
     }
 
