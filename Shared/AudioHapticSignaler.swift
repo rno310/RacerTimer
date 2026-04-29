@@ -134,7 +134,7 @@ public final class AudioHapticSignaler: SignalPlaying {
 
     private func hapticLight() {
         #if os(watchOS)
-        WKInterfaceDevice.current().play(.click)
+        WKInterfaceDevice.current().play(.success)
         #elseif os(iOS)
         let gen = UIImpactFeedbackGenerator(style: .light)
         gen.prepare()
