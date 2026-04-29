@@ -239,12 +239,15 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					345273CF2EA90C511B526BA3 = {
+						DevelopmentTeam = 62UWKKAZSA;
 						ProvisioningStyle = Automatic;
 					};
 					8025A6D61930695BE7056D99 = {
+						DevelopmentTeam = 62UWKKAZSA;
 						ProvisioningStyle = Automatic;
 					};
 					C80089875B4C776D214863E1 = {
+						DevelopmentTeam = 62UWKKAZSA;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -364,7 +367,7 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
-				PRODUCT_NAME = Tutastart;
+				PRODUCT_NAME = "Tutastart Watch App";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -424,6 +427,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 62UWKKAZSA;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -485,6 +489,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 62UWKKAZSA;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -561,7 +566,7 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
-				PRODUCT_NAME = Tutastart;
+				PRODUCT_NAME = "Tutastart Watch App";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
