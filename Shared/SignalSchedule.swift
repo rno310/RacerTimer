@@ -36,6 +36,13 @@ public enum SignalSchedule {
         }
         events.append(SignalEvent(secondsBeforeZero: 0, kind: .startSignal))
 
+        let existing = Set(events.map { $0.secondsBeforeZero })
+        for s in stride(from: 15, through: duration.rawValue - 15, by: 15) {
+            if !existing.contains(s) {
+                events.append(SignalEvent(secondsBeforeZero: s, kind: .short))
+            }
+        }
+
         return events.sorted { $0.secondsBeforeZero > $1.secondsBeforeZero }
     }
 }
