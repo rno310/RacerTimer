@@ -29,6 +29,7 @@
 		655AB9653AEBFA25D6B47AEB /* AudioHapticSignaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BB3CA207F071C5A16718F3 /* AudioHapticSignaler.swift */; };
 		68D22495F88CEB85AF0075AB /* TimerDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242081418D4DCC0749DF533 /* TimerDisplay.swift */; };
 		7053241F82C7522E343F0660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C7DE8BE1E128179DB3B174 /* Assets.xcassets */; };
+		72246EA6CC6C9D56C96D9239 /* RuntimeSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86038469325546FE515FD555 /* RuntimeSessionController.swift */; };
 		75376FCA45FD0C87D1826E37 /* TimerDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242081418D4DCC0749DF533 /* TimerDisplay.swift */; };
 		7AC0C3D332E3D84670DC26A5 /* TutastartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FD9CBFACEF7FFCF1546F /* TutastartApp.swift */; };
 		8308BE139CCCEBDD5AFC7749 /* TimerEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CF82D90CAE30300E2F031 /* TimerEngineTests.swift */; };
@@ -84,6 +85,7 @@
 		6E0952FD4262C99BBE855C5A /* TimerDisplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDisplayTests.swift; sourceTree = "<group>"; };
 		805CF82D90CAE30300E2F031 /* TimerEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEngineTests.swift; sourceTree = "<group>"; };
 		8526E0FDB89D71CB397BAC68 /* TutastartTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TutastartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86038469325546FE515FD555 /* RuntimeSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeSessionController.swift; sourceTree = "<group>"; };
 		86F22C9D7FC0DBCF878887CB /* SignalSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalSchedule.swift; sourceTree = "<group>"; };
 		8EDECED24AB9845240945FBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8F0053315564154256F5CBDE /* SignalScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalScheduleTests.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				15EE613F0192F7D72CA7B705 /* Assets.xcassets */,
 				8EDECED24AB9845240945FBB /* Info.plist */,
+				86038469325546FE515FD555 /* RuntimeSessionController.swift */,
 				DFB679D78BF162357C277BB2 /* SettingsView.swift */,
 				E9A56865A98E121920C1BC46 /* TimerView.swift */,
 				3367CDCD274843A64E6AB430 /* TutastartWatchApp.swift */,
@@ -339,6 +342,7 @@
 				F4021309F57D31950EBD46F8 /* AppVersion.swift in Sources */,
 				33781E8887508A07589E34FD /* AudioHapticSignaler.swift in Sources */,
 				AA9790900790FC03DECB12FB /* ConnectivityBridge.swift in Sources */,
+				72246EA6CC6C9D56C96D9239 /* RuntimeSessionController.swift in Sources */,
 				BC13722A3EAE14AF65E4A8A6 /* SettingsView.swift in Sources */,
 				28C1C6703E23EFF61CD2DD1E /* SignalSchedule.swift in Sources */,
 				156F7357F9312D408F1B07BE /* TimerDisplay.swift in Sources */,

@@ -3,11 +3,20 @@ import SwiftUI
 @main
 struct TutastartWatchApp: App {
     @StateObject private var model = AppModel()
+    @StateObject private var runtime = RuntimeSessionController()
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environmentObject(model)
+                .onChange(of: model.engine.state.mode) { _, mode in
+                    if mode == .running {
+                        let stopAt = model.engine.state.zeroDate?.addingTimeInterval(120)
+                        runtime.start(autoStopAt: stopAt)
+                    } else {
+                        runtime.stop()
+                    }
+                }
         }
     }
 }
