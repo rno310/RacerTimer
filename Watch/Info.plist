@@ -20,6 +20,10 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Pin to Win uses a workout session so the start sequence keeps running with the wrist down.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Pin to Win uses a workout session so the start sequence keeps running with the wrist down.</string>
 	<key>WKApplication</key>
 	<true/>
 	<key>WKCompanionAppBundleIdentifier</key>

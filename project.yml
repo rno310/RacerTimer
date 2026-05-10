@@ -13,7 +13,7 @@ settings:
     DEVELOPMENT_TEAM: 62UWKKAZSA
     ENABLE_PREVIEWS: YES
     GENERATE_INFOPLIST_FILE: YES
-    MARKETING_VERSION: "1.1"
+    MARKETING_VERSION: "1.3"
     CURRENT_PROJECT_VERSION: "1"
 
 targets:
@@ -45,6 +45,8 @@ targets:
     sources:
       - path: Watch
       - path: Shared
+    dependencies:
+      - sdk: HealthKit.framework
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.arnaud.tutastart.watchkitapp
@@ -53,6 +55,7 @@ targets:
         INFOPLIST_FILE: Watch/Info.plist
         GENERATE_INFOPLIST_FILE: NO
         TARGETED_DEVICE_FAMILY: "4"
+        CODE_SIGN_ENTITLEMENTS: "Watch/Tutastart Watch App.entitlements"
 
   TutastartTests:
     type: bundle.unit-test
