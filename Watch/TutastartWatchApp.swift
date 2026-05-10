@@ -3,7 +3,7 @@ import SwiftUI
 @main
 struct TutastartWatchApp: App {
     @StateObject private var model = AppModel()
-    @StateObject private var runtime = RuntimeSessionController()
+    @StateObject private var workout = WorkoutSessionController()
 
     var body: some Scene {
         WindowGroup {
@@ -11,10 +11,10 @@ struct TutastartWatchApp: App {
                 .environmentObject(model)
                 .onChange(of: model.engine.state.mode) { _, mode in
                     if mode == .running {
-                        let stopAt = model.engine.state.zeroDate?.addingTimeInterval(120)
-                        runtime.start(autoStopAt: stopAt)
+                        let fallbackStop = model.engine.state.zeroDate?.addingTimeInterval(120)
+                        workout.start(fallbackAutoStopAt: fallbackStop)
                     } else {
-                        runtime.stop()
+                        workout.stop()
                     }
                 }
         }

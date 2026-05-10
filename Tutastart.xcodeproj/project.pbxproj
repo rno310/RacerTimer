@@ -32,6 +32,7 @@
 		72246EA6CC6C9D56C96D9239 /* RuntimeSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86038469325546FE515FD555 /* RuntimeSessionController.swift */; };
 		75376FCA45FD0C87D1826E37 /* TimerDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242081418D4DCC0749DF533 /* TimerDisplay.swift */; };
 		7AC0C3D332E3D84670DC26A5 /* TutastartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0552FD9CBFACEF7FFCF1546F /* TutastartApp.swift */; };
+		81B3AF3FE40FB36715D2B3D6 /* WorkoutSessionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233E99AEA09679617F65ACB /* WorkoutSessionController.swift */; };
 		8308BE139CCCEBDD5AFC7749 /* TimerEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805CF82D90CAE30300E2F031 /* TimerEngineTests.swift */; };
 		9DBB4BAB58024E820A2D8284 /* TimerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F035D17D98AFD1559FDC20B /* TimerEngine.swift */; };
 		A33CBA720491EE0BAC3B70B5 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7A93B9B06D5113682CC8A /* TimerView.swift */; };
@@ -41,6 +42,7 @@
 		BFA05944529BF374D43CA356 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15EE613F0192F7D72CA7B705 /* Assets.xcassets */; };
 		C53F7F4CA1FF51B38692C586 /* TimerDisplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0952FD4262C99BBE855C5A /* TimerDisplayTests.swift */; };
 		CCA85362B9C045E94E481A77 /* RecordingSignaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC34D7368664DA562CC61E9 /* RecordingSignaler.swift */; };
+		CEB6F8078739E2B7221A99E7 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734455E567CF15EC13CF41A6 /* HealthKit.framework */; };
 		D45717F4E3D220B41D4C9393 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5774CEDEB3A281425E1487 /* AppVersion.swift */; };
 		E1DDCAC75120D52DDB18C183 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73A1A6C6E0860D1937C1210 /* SettingsView.swift */; };
 		EAF2C2BF2DE60A6EE04FCBEA /* ConnectivityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F73C45D43FA94F2AC89FE10 /* ConnectivityBridge.swift */; };
@@ -83,6 +85,8 @@
 		2F035D17D98AFD1559FDC20B /* TimerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEngine.swift; sourceTree = "<group>"; };
 		3367CDCD274843A64E6AB430 /* TutastartWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutastartWatchApp.swift; sourceTree = "<group>"; };
 		6E0952FD4262C99BBE855C5A /* TimerDisplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDisplayTests.swift; sourceTree = "<group>"; };
+		7233E99AEA09679617F65ACB /* WorkoutSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionController.swift; sourceTree = "<group>"; };
+		734455E567CF15EC13CF41A6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		805CF82D90CAE30300E2F031 /* TimerEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEngineTests.swift; sourceTree = "<group>"; };
 		8526E0FDB89D71CB397BAC68 /* TutastartTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = TutastartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86038469325546FE515FD555 /* RuntimeSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuntimeSessionController.swift; sourceTree = "<group>"; };
@@ -91,7 +95,7 @@
 		8F0053315564154256F5CBDE /* SignalScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalScheduleTests.swift; sourceTree = "<group>"; };
 		96D8774D0473F405FBFE12E2 /* TimerStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerStateTests.swift; sourceTree = "<group>"; };
 		A68DF4CF515D67F9AE6C6DD2 /* Tutastart Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tutastart Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCF551A6E62788269DF12057 /* Tutastart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tutastart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCF551A6E62788269DF12057 /* Tutastart.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Tutastart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73A1A6C6E0860D1937C1210 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D242081418D4DCC0749DF533 /* TimerDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDisplay.swift; sourceTree = "<group>"; };
 		DFB679D78BF162357C277BB2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -100,6 +104,17 @@
 		EAB7A93B9B06D5113682CC8A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		EDC34D7368664DA562CC61E9 /* RecordingSignaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSignaler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F574DC04714E59CA595D3BE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB6F8078739E2B7221A99E7 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		40BC87FF921186DB1AA4334B /* Tests */ = {
@@ -136,6 +151,7 @@
 				5342E8FD3339806F7DD613E7 /* Shared */,
 				40BC87FF921186DB1AA4334B /* Tests */,
 				88E945848598C7FE632B28F0 /* Watch */,
+				B2E18F451ACFED5C7D90FB71 /* Frameworks */,
 				C3EDEC2E0EEBB9ABE132CD04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,8 +176,17 @@
 				DFB679D78BF162357C277BB2 /* SettingsView.swift */,
 				E9A56865A98E121920C1BC46 /* TimerView.swift */,
 				3367CDCD274843A64E6AB430 /* TutastartWatchApp.swift */,
+				7233E99AEA09679617F65ACB /* WorkoutSessionController.swift */,
 			);
 			path = Watch;
+			sourceTree = "<group>";
+		};
+		B2E18F451ACFED5C7D90FB71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				734455E567CF15EC13CF41A6 /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		C3EDEC2E0EEBB9ABE132CD04 /* Products */ = {
@@ -203,6 +228,7 @@
 			buildPhases = (
 				D1BAAE5B9C5EDC141C4F23C9 /* Sources */,
 				23F2F366122672C1B584C37A /* Resources */,
+				F574DC04714E59CA595D3BE2 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -350,6 +376,7 @@
 				4BD1A7833AC1A06460AF8850 /* TimerState.swift in Sources */,
 				3AD1F44DE6A18834FAF1D497 /* TimerView.swift in Sources */,
 				1D1247E78AD2A40C6773F13B /* TutastartWatchApp.swift in Sources */,
+				81B3AF3FE40FB36715D2B3D6 /* WorkoutSessionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +397,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
-				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
 				PRODUCT_NAME = "Tutastart Watch App";
 				SDKROOT = watchos;
@@ -540,7 +566,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = iphoneos;
@@ -571,7 +596,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
-				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
 				PRODUCT_NAME = "Tutastart Watch App";
 				SDKROOT = watchos;
@@ -594,7 +618,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart;
 				PRODUCT_NAME = Tutastart;
 				SDKROOT = iphoneos;

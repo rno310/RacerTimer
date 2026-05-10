@@ -45,6 +45,8 @@ targets:
     sources:
       - path: Watch
       - path: Shared
+    dependencies:
+      - sdk: HealthKit.framework
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.arnaud.tutastart.watchkitapp
