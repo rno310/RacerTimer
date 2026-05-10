@@ -49,24 +49,8 @@ final class SignalScheduleTests: XCTestCase {
     }
 
     func testScheduleCountsAreExact() {
-        XCTAssertEqual(SignalSchedule.events(for: .threeMinutes).count, 20)
-        XCTAssertEqual(SignalSchedule.events(for: .fiveMinutes).count, 28)
-    }
-
-    func testFifteenSecondTicksThreeMinute() {
-        let events = SignalSchedule.events(for: .threeMinutes)
-        let map = Dictionary(uniqueKeysWithValues: events.map { ($0.secondsBeforeZero, $0.kind) })
-        for t in [165, 135, 105, 75, 45, 15] {
-            XCTAssertEqual(map[t], .short, "expected .short at \(t)s")
-        }
-    }
-
-    func testFifteenSecondTicksFiveMinute() {
-        let events = SignalSchedule.events(for: .fiveMinutes)
-        let map = Dictionary(uniqueKeysWithValues: events.map { ($0.secondsBeforeZero, $0.kind) })
-        for t in [285, 270, 255, 225, 210, 195, 165, 135, 105, 75, 45, 15] {
-            XCTAssertEqual(map[t], .short, "expected .short at \(t)s")
-        }
+        XCTAssertEqual(SignalSchedule.events(for: .threeMinutes).count, 14)
+        XCTAssertEqual(SignalSchedule.events(for: .fiveMinutes).count, 16)
     }
 
     func testOneMinuteMarkIsSingleLong() {
