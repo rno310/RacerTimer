@@ -55,6 +55,7 @@ targets:
         INFOPLIST_FILE: Watch/Info.plist
         GENERATE_INFOPLIST_FILE: NO
         TARGETED_DEVICE_FAMILY: "4"
+        CODE_SIGN_ENTITLEMENTS: "Watch/Tutastart Watch App.entitlements"
 
   TutastartTests:
     type: bundle.unit-test

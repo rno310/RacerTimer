@@ -84,6 +84,7 @@
 		2E5774CEDEB3A281425E1487 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		2F035D17D98AFD1559FDC20B /* TimerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEngine.swift; sourceTree = "<group>"; };
 		3367CDCD274843A64E6AB430 /* TutastartWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutastartWatchApp.swift; sourceTree = "<group>"; };
+		619479007D9A392CDC54CAF6 /* Tutastart Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Tutastart Watch App.entitlements"; sourceTree = "<group>"; };
 		6E0952FD4262C99BBE855C5A /* TimerDisplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerDisplayTests.swift; sourceTree = "<group>"; };
 		7233E99AEA09679617F65ACB /* WorkoutSessionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionController.swift; sourceTree = "<group>"; };
 		734455E567CF15EC13CF41A6 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -175,6 +176,7 @@
 				86038469325546FE515FD555 /* RuntimeSessionController.swift */,
 				DFB679D78BF162357C277BB2 /* SettingsView.swift */,
 				E9A56865A98E121920C1BC46 /* TimerView.swift */,
+				619479007D9A392CDC54CAF6 /* Tutastart Watch App.entitlements */,
 				3367CDCD274843A64E6AB430 /* TutastartWatchApp.swift */,
 				7233E99AEA09679617F65ACB /* WorkoutSessionController.swift */,
 			);
@@ -395,6 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Watch/Tutastart Watch App.entitlements";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
@@ -594,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = WatchAppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Watch/Tutastart Watch App.entitlements";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Watch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnaud.tutastart.watchkitapp;
